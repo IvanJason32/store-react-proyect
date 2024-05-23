@@ -1,0 +1,11 @@
+:root{
+    --blueBackGround: #153448;
+    --bluelight: #3C5B6F;
+    --brownDark: #948979;
+    --brownLight: #DFD0B8;
+    --white: #fff;
+}
+
+body{
+    background-color: var(--blueBackGround);
+}

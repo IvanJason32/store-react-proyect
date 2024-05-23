@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-    <div style={{ textAlign: "center", marginTop: "10px" }}>
+    <div style={{ textAlign: "center", marginTop: "10px", color:"white" }}>
       <h1>Login</h1>
-      <p>No estas registrado? <Link to="/register">Registrate</Link></p>
+      <p>No estas registrado? <Link style={{color: "white"}} to="/register">Registrate</Link></p>
     </div>
   )
 }

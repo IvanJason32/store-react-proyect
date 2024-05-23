@@ -2,7 +2,9 @@ import React from 'react'
 
 const Hats = () => {
   return (
-    <div>Hats</div>
+    <div style={{ textAlign: "center", marginTop: "10px", color:"white" }}>
+      <h1>Hats</h1>
+    </div>
   )
 }
 
