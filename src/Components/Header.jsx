@@ -1,7 +1,12 @@
+// import { useLoginContext } from "../hooks/useLoginContext";
+import { useAuth } from "../hooks/useAuth";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const { token, login, logout } = useAuth();
+  console.log(token);
+
   return (
     <div className="navbar">
       <div className="navbar-opcions">
@@ -56,13 +61,27 @@ const Header = () => {
         >
           Carrito
         </NavLink>
-        <NavLink
-          to="/login"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Login
-        </NavLink>
+        {token ? (
+          <NavLink
+            onClick={logout}
+            style={{
+              color: "red"
+            }}
+            to="/login"
+            className={`title-opc ${({ isActive }) =>
+              isActive ? "active" : ""}`}
+          >
+            Logout
+          </NavLink>
+        ) : (
+          <NavLink
+            to="/login"
+            className={`title-opc ${({ isActive }) =>
+              isActive ? "active" : ""}`}
+          >
+            Login
+          </NavLink>
+        )}
       </div>
     </div>
   );
