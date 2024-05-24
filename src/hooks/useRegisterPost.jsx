@@ -1,20 +1,22 @@
-import { useState } from 'react';
+// import React from 'react'
 
-const useLoginPost = () => {
-  const [loading, setLoading] = useState(false);
+import { useState } from "react";
+
+const useRegisterPost = () => {
+    const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const loginDo = async (email, password) => {
+  const registerUser = async (displayName, email, password) => {
     setLoading(true);
     setError(null);
 
     try {
-      const response = await fetch('https://store-api-backend-steel.vercel.app/api/auth/login', {
+      const response = await fetch('https://store-api-backend-steel.vercel.app/api/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ displayName, email, password }),
       });
 
       const data = await response.json();
@@ -35,7 +37,7 @@ const useLoginPost = () => {
     }
   };
 
-  return { loginDo, loading, error };
-};
+  return { registerUser, loading, error };
+}
 
-export default useLoginPost;
+export default useRegisterPost;

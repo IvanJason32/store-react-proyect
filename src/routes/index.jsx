@@ -11,6 +11,10 @@ import Hats from "../pages/Hats";
 import Jackets from "../pages/Jackets";
 import Register from "../pages/Register";
 import Carrito from "../pages/Carrito";
+import Logueado from "../Components/Logueado";
+import Checkout from "../pages/Checkout ";
+import RequiredAuth from "../Components/RequiredAuth";
+import Succes from "../pages/Succes";
 
 export const router = createHashRouter([
   {
@@ -52,7 +56,11 @@ export const router = createHashRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <Logueado>
+            <Login />
+          </Logueado>
+        ),
       },
       {
         path: "/carrito",
@@ -60,7 +68,27 @@ export const router = createHashRouter([
       },
       {
         path: "/register",
-        element: <Register />,
+        element: (
+          <Logueado>
+            <Register />
+          </Logueado>
+        ),
+      },
+      {
+        path: "/checkout",
+        element: (
+          <RequiredAuth>
+            <Checkout />
+          </RequiredAuth>
+        ),
+      },
+      {
+        path: "/succes",
+        element: (
+          <RequiredAuth>
+            <Succes />
+          </RequiredAuth>
+        ),
       },
     ],
   },
