@@ -4,17 +4,14 @@ import Producto from "../pages/Producto";
 import RouteNotFound from "../pages/RouteNotFound";
 import Root from "../pages/Root";
 import Login from "../pages/Login";
-import Men from "../pages/Men";
-import Women from "../pages/Women";
-import Sneakers from "../pages/Sneakers";
-import Hats from "../pages/Hats";
-import Jackets from "../pages/Jackets";
 import Register from "../pages/Register";
 import Carrito from "../pages/Carrito";
 import Logueado from "../Components/Logueado";
 import Checkout from "../pages/Checkout ";
 import RequiredAuth from "../Components/RequiredAuth";
 import Succes from "../pages/Succes";
+import Categorias from "../pages/Categorias";
+import Categoria from "../pages/Categoria";
 
 export const router = createHashRouter([
   {
@@ -31,25 +28,33 @@ export const router = createHashRouter([
         element: <HomePage />,
       },
       {
-        path: "/men",
-        element: <Men />,
+        path: "/categorias",
+        element: <Categorias />,
       },
       {
-        path: "/women",
-        element: <Women />,
+        path: "/categorias/:categoriaName",
+        element: <Categoria />,
       },
-      {
-        path: "/sneakers",
-        element: <Sneakers />,
-      },
-      {
-        path: "/hats",
-        element: <Hats />,
-      },
-      {
-        path: "/jackets",
-        element: <Jackets />,
-      },
+      // {
+      //   path: "/mens",
+      //   element: <Men />,
+      // },
+      // {
+      //   path: "/womens",
+      //   element: <Women />,
+      // },
+      // {
+      //   path: "/sneakers",
+      //   element: <Sneakers />,
+      // },
+      // {
+      //   path: "/hats",
+      //   element: <Hats />,
+      // },
+      // {
+      //   path: "/jackets",
+      //   element: <Jackets />,
+      // },
       {
         path: "/producto",
         element: <Producto />,
@@ -92,4 +97,5 @@ export const router = createHashRouter([
       },
     ],
   },
+  
 ]);

@@ -1,11 +1,26 @@
 // import { useLoginContext } from "../hooks/useLoginContext";
+import { useEffect, useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import { useFetchCollection } from "../hooks/useFetchCollection";
 
 const Header = () => {
   const { token, login, logout } = useAuth();
-  console.log(token);
+  const { data, isPending, error, getData } = useFetchCollection();
+  const [uniqueTitles, setUniqueTitles] = useState([]);
+  // console.log(token);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    if (!isPending) {
+      const titles = [...new Set(data.map((item) => item.title))];
+      setUniqueTitles(titles);
+    }
+  }, [data, isPending]);
 
   return (
     <div className="navbar">
@@ -17,41 +32,21 @@ const Header = () => {
         >
           Home
         </NavLink>
-        <NavLink
-          to="/women"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Women
-        </NavLink>
-        <NavLink
-          to="/men"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Men
-        </NavLink>
-        <NavLink
-          to="/hats"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Hats
-        </NavLink>
-        <NavLink
-          to="/sneakers"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Sneakers
-        </NavLink>
-        <NavLink
-          to="/jackets"
-          className={`title-opc ${({ isActive }) =>
-            isActive ? "active" : ""}`}
-        >
-          Jackets
-        </NavLink>
+        {uniqueTitles
+          ? uniqueTitles.map((element, index) => {
+              return (
+                  <NavLink
+                  key={index}
+                    to={`/categorias/${element}`}
+                    className={`title-opc ${({ isActive }) =>
+                      isActive ? "active" : ""}`}
+                  >
+                    {element}
+                  </NavLink>
+              );
+            })
+          : ""}
+        
       </div>
       <div className="loginRegister">
         <NavLink
@@ -65,7 +60,7 @@ const Header = () => {
           <NavLink
             onClick={logout}
             style={{
-              color: "red"
+              color: "red",
             }}
             to="/login"
             className={`title-opc ${({ isActive }) =>

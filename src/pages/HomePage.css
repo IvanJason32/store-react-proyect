@@ -23,7 +23,6 @@
     height: 120px;
     border-radius: 10px;
     margin-top: 10px;
-    /* border: 1px solid black; */
 }
 
 .name-categoria{
@@ -32,3 +31,10 @@
     font-size: 25px;
     
 }
+
+/* .modal-loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    opacity: 0.3;
+} */
