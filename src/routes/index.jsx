@@ -13,6 +13,7 @@ import Succes from "../pages/Succes";
 import Categorias from "../pages/Categorias";
 import Categoria from "../pages/Categoria";
 
+
 export const router = createHashRouter([
   {
     path: "/",
@@ -56,7 +57,7 @@ export const router = createHashRouter([
       //   element: <Jackets />,
       // },
       {
-        path: "/producto",
+        path: "/products/:productId",
         element: <Producto />,
       },
       {
