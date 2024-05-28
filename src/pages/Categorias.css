@@ -1,0 +1,28 @@
+.container_class{
+    /* border: 1px solid white; */
+    /* width: 100%; */
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+}
+.container_products_class{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.title-category{
+    cursor: pointer;
+}
