@@ -45,7 +45,7 @@ const HomePage = () => {
                 );
             })
           : <div className="modal-loading">
-            <p>Cargando...</p></div>}
+            <p>Loading...</p></div>}
       </div>
     </div>
   );

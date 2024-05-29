@@ -63,10 +63,10 @@ const Register = () => {
           />
         </div>
         <button className="btn-register" disabled={loading ? true : false}>
-          {loading ? "Registrando usuario..." : "Registrar usuarios"}
+          {loading ? "Registering user..." : "Sign Up"}
         </button>
       </form>
-      {error && <p style={{ color: "red" }}>Ocurrio un error</p>}
+      {error && <p style={{ color: "red" }}>There is an error</p>}
       {redirect && <Navigate to="/home" replace={true} />}
       {warning && <p style={{ color: "red" }}>{warning}</p>}
     </div>

@@ -29,7 +29,7 @@ const Login = () => {
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="email-form">
-          <label htmlFor="email">Correo electronico:</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="text"
             id="email"
@@ -38,7 +38,7 @@ const Login = () => {
           />
         </div>
         <div className="password-form">
-          <label htmlFor="password">Constraseña:</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="text"
             id="password"
@@ -50,11 +50,11 @@ const Login = () => {
           {loading ? "Iniciando sesión..." : "Iniciar sesión"}
         </button>
       </form>
-      {error && <p style={{ color: "red" }}>Usuario no encontrado</p>}
+      {error && <p style={{ color: "red" }}>User not Found</p>}
       <p>
-        ¿No estas registrado?{" "}
+        ¿Your'e not registered?{" "}
         <Link style={{ color: "white" }} to="/register">
-          Registrate
+          Sign Up
         </Link>
       </p>
 

@@ -26,7 +26,7 @@ const Categoria = () => {
                 />
             ))
         ) : (
-          <p>Cargando...</p>
+          <p>Loading...</p>
         )}
       </div>
     </div>
