@@ -38,32 +38,18 @@ section {
 }
 
 .cart-content{
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     border-radius: 50px;
-}
-
-img{
-    border-radius: 0;
-}
-
-.product-content{
-    background-color: white;
-    border: 1px solid black;
-    height: 200px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-     
-}
-
-.section-cantidad{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 10px;
 }
+
+
+
+
+
+
 
 .botton-section{
     display: flex;
@@ -77,20 +63,4 @@ img{
     font-size: 15pt;
 }
 
-.btn-cart{
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-}
 
-.section-1{
-    margin-left: 10px;
-}
-.section-2{
-    margin-left: 20px;
-}
-.cantidad{
-    font-weight: bold;
-}

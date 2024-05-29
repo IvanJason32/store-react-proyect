@@ -1,3 +1,11 @@
+:root{
+    --purpleBackGround: #352F44;
+    --purplelight: #5C5470;
+    --lila: #B9B4C7;
+    --white: #FAF0E6;
+    --black: #000000;
+}
+
 .container-categorias {
   display: flex;
   flex-direction: row;
@@ -10,13 +18,14 @@
     font-family: "Roboto", sans-serif;
 }
 .card-categoria {
-  background-color: white;
+  background-color: var(--lila);
   width: 200px;
   height: 250px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   gap: 20px;
   cursor: pointer;
   text-decoration: none;
@@ -30,15 +39,7 @@
 }
 
 .name-categoria {
-  color: black;
-  /* font-family: Arial, Helvetica, sans-serif; */
+  color: var(--black);
   font-family: "Roboto", sans-serif;
   font-size: 25px;
 }
-
-/* .modal-loading{
-    width: 100vw;
-    height: 100vh;
-    background-color: gray;
-    opacity: 0.3;
-} */

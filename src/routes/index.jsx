@@ -36,26 +36,6 @@ export const router = createHashRouter([
         path: "/categorias/:categoriaName",
         element: <Categoria />,
       },
-      // {
-      //   path: "/mens",
-      //   element: <Men />,
-      // },
-      // {
-      //   path: "/womens",
-      //   element: <Women />,
-      // },
-      // {
-      //   path: "/sneakers",
-      //   element: <Sneakers />,
-      // },
-      // {
-      //   path: "/hats",
-      //   element: <Hats />,
-      // },
-      // {
-      //   path: "/jackets",
-      //   element: <Jackets />,
-      // },
       {
         path: "/product/:productId",
         element: <Producto />,

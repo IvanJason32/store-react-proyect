@@ -4,7 +4,7 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { useFetchCollection } from "../hooks/useFetchCollection";
 import { useSelector } from "react-redux";
-import carritoImg from '../assets/carritoCompra.png'
+import carritoImg from "../assets/carritoCompra.png";
 
 const Header = () => {
   const { token, logout } = useAuth();
@@ -44,18 +44,17 @@ const Header = () => {
         {uniqueTitles
           ? uniqueTitles.map((element, index) => {
               return (
-                  <NavLink
+                <NavLink
                   key={index}
-                    to={`/categorias/${element}`}
-                    className={`title-opc ${({ isActive }) =>
-                      isActive ? "active" : ""}`}
-                  >
-                    {element}
-                  </NavLink>
+                  to={`/categorias/${element}`}
+                  className={`title-opc ${({ isActive }) =>
+                    isActive ? "active" : ""}`}
+                >
+                  {element}
+                </NavLink>
               );
             })
           : ""}
-        
       </div>
       <div className="loginRegister">
         <NavLink
@@ -64,10 +63,9 @@ const Header = () => {
             isActive ? "active" : ""}`}
         >
           <div className="cont-cart">
-          <img className="img-carrito" src={carritoImg} alt="" />
-          {totalItems !== 0 ? <div className="circul">{totalItems}</div> : ""}
+            <img className="img-carrito" src={carritoImg} alt="" />
+            {totalItems !== 0 ? <div className="circul">{totalItems}</div> : ""}
           </div>
-          
         </NavLink>
         {token ? (
           <NavLink

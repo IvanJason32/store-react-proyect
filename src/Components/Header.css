@@ -1,15 +1,14 @@
 :root{
-    --blueBackGround: #153448;
-    --bluelight: #3C5B6F;
-    --brownDark: #948979;
-    --brownLight: #DFD0B8;
-    --white: #fff;
+    --purpleBackGround: #352F44;
+    --purplelight: #5C5470;
+    --lila: #B9B4C7;
+    --white: #FAF0E6;
 }
 
 .navbar{
     width: 100vw;
     height: 50px;
-    background-color: var(--bluelight);
+    background-color: var(--purplelight);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,7 +27,6 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    /* border: 1px solid black; */
 }
 .title-opc{
     text-decoration: none;
@@ -37,18 +35,16 @@
     align-items: center;
 }
 .active {
-    color: var(--brownLight);
+    color: var(--lila);
     font-weight: bold;    
 }
 
 .img-carrito{
     width: 30px;
     height: 30px;
-    /* border: 1px solid black; */
     border-radius: 0px;
 }
 .cont-cart{
-    /* border: 1px solid black; */
     display: flex;
     position: relative;
 }

@@ -1,0 +1,45 @@
+.img-card-product {
+    height: 90%;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.product-content{
+    background-color: white;
+    border: 1px solid black;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.section-cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-cart{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.section-1{
+    margin-left: 40px;
+    height: 200px;
+    border: 1px solid purple;
+    display: flex;
+    align-items: center;
+}
+.section-2{
+    margin-left: 20px;
+}
+.cantidad{
+    font-weight: bold;
+}

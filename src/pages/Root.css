@@ -1,5 +1,5 @@
 :root{
-    --blueBackGround: #153448;
+    --purpleBackGround: #352F44;
     --bluelight: #3C5B6F;
     --brownDark: #948979;
     --brownLight: #DFD0B8;
@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: var(--blueBackGround);
+    background-color: var(--purpleBackGround);
     width: 100vw;
     height: 100vh;
 }

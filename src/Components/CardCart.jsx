@@ -1,6 +1,6 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart, decreseToCart } from "../redux/slices/cartSlice";
+import './CardCart.css'
 
 const CardCart = ({product}) => {
     const dispatch = useDispatch();
@@ -8,7 +8,7 @@ const CardCart = ({product}) => {
   return (
     <div className="product-content">
       <div className="section-1">
-        <img src={product.imageurl} alt="" />
+        <img className="img-card-product" src={product.imageurl} alt="" />
       </div>
       <div className="section-2">
         <p>{product.name}</p>

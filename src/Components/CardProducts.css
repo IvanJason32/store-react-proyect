@@ -1,23 +1,38 @@
+:root{
+    --purpleBackGround: #352F44;
+    --purplelight: #5C5470;
+    --lila: #B9B4C7;
+    --white: #FAF0E6;
+    --black: #000000;
+}
+
 .card_product {
-    width: 180px;
-    height: 220px;
-    background-color: white;
-    color: black;
+    width: 185px;
+    height: 265px;
+    background-color: var(--lila);
+    color: var(--black);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    gap: 5px;
     font-family: "Roboto", sans-serif;
 }
 
-img{
-    width: 150px;
-    height: 160px;
-    border-radius: 20px;
+.img-product{
+    width: 100%;
+    height: 190px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
-.price-t{
+
+.name-product{
+    margin-top: 5px;
+    width: 90%;
+    text-align: center;
+}
+.price-product{
     font-weight: bold;
+    margin-bottom: 5px;
 }

@@ -1,4 +1,4 @@
-// import React from "react";
+
 import { useDispatch } from "react-redux";
 import { cleanCart } from "../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
