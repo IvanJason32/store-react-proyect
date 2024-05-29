@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import useLoginPost from "../hooks/useLoginPost";
 import { useAuth } from "../hooks/useAuth";
+import './Login.css'
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
+    <div className="contLogin" style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="email-form">

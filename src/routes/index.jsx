@@ -57,7 +57,7 @@ export const router = createHashRouter([
       //   element: <Jackets />,
       // },
       {
-        path: "/products/:productId",
+        path: "/product/:productId",
         element: <Producto />,
       },
       {

@@ -1,12 +1,23 @@
 .card_product {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 220px;
     background-color: white;
     color: black;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    font-family: "Roboto", sans-serif;
 }
 
 img{
     width: 150px;
-    height: 150px;
+    height: 160px;
+    border-radius: 20px;
+}
+.price-t{
+    font-weight: bold;
 }

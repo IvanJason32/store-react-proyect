@@ -1,15 +1,17 @@
-// import { useLoginContext } from "../hooks/useLoginContext";
 import { useEffect, useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { useFetchCollection } from "../hooks/useFetchCollection";
+import { useSelector } from "react-redux";
+import carritoImg from '../assets/carritoCompra.png'
 
 const Header = () => {
-  const { token, login, logout } = useAuth();
-  const { data, isPending, error, getData } = useFetchCollection();
+  const { token, logout } = useAuth();
+  const { data, isPending, getData } = useFetchCollection();
   const [uniqueTitles, setUniqueTitles] = useState([]);
-  // console.log(token);
+  const { totalItems } = useSelector((store) => store.cart);
+  console.log(totalItems);
 
   useEffect(() => {
     getData();
@@ -23,7 +25,7 @@ const Header = () => {
   }, [data, isPending]);
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="navbar-opcions">
         <NavLink
           to="/home"
@@ -31,6 +33,13 @@ const Header = () => {
             isActive ? "active" : ""}`}
         >
           Home
+        </NavLink>
+        <NavLink
+          to="/categorias"
+          className={`title-opc ${({ isActive }) =>
+            isActive ? "active" : ""}`}
+        >
+          Categorias
         </NavLink>
         {uniqueTitles
           ? uniqueTitles.map((element, index) => {
@@ -54,7 +63,11 @@ const Header = () => {
           className={`title-opc ${({ isActive }) =>
             isActive ? "active" : ""}`}
         >
-          Carrito
+          <div className="cont-cart">
+          <img className="img-carrito" src={carritoImg} alt="" />
+          {totalItems !== 0 ? <div className="circul">{totalItems}</div> : ""}
+          </div>
+          
         </NavLink>
         {token ? (
           <NavLink
@@ -78,7 +91,7 @@ const Header = () => {
           </NavLink>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 

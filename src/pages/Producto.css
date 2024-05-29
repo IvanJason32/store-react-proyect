@@ -1,15 +1,20 @@
 .product-section {
+  width: 100vw;
+  /* height: 100vh; */
+  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-product-container {
   display: grid;
+  /* border: 1px solid rebeccapurple; */
   grid-template-columns: 1fr 1fr;
   background-color: aliceblue;
-  width: 788px;
+  width: 850px;
   margin-bottom: 40px;
   border-radius: 20px;
   height: 402px;
@@ -54,29 +59,34 @@
 .section-products-container {
   width: 80%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* width: 200px; */
+  gap: 15px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* border: 1px solid black; */
 }
 
-.card-product {
+/* .card-product {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
   width: 200px;
   text-align: center;
-}
+} */
 
-.card-product-image {
+/* .card-product-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-}
+  border-radius: 8px; */
+/* } */
 
 .card-product-name {
   font-size: 1.2em;

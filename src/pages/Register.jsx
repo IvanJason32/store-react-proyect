@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import useRegisterPost from "../hooks/useRegisterPost";
 import { Navigate } from "react-router-dom";
+import './Register.css'
 
 const Register = () => {
   const [displayName, setDisplayName] = useState("");
@@ -31,7 +32,7 @@ const Register = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
+    <div className="contRegister" style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <div className="username-form">

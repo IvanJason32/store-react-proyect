@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .navbar-opcions {
@@ -27,14 +27,43 @@
     margin-right: 40px;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 30px;
+    /* border: 1px solid black; */
 }
 .title-opc{
     text-decoration: none;
     color: var(--white);
+    display: flex;
+    align-items: center;
 }
 .active {
     color: var(--brownLight);
     font-weight: bold;    
 }
 
+.img-carrito{
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid black; */
+    border-radius: 0px;
+}
+.cont-cart{
+    /* border: 1px solid black; */
+    display: flex;
+    position: relative;
+}
+
+.circul {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8pt;
+}

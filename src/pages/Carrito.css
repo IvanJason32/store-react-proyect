@@ -1,0 +1,96 @@
+.cart-container {
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.btnPagar{
+    background-color: red;
+    width: 70px;
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.t-l-btn{
+    text-decoration: none;
+    width: 70px;
+    height: 30px;
+}
+
+.cart-title{
+    color: white;
+}
+
+.cart-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+img{
+    border-radius: 0;
+}
+
+.product-content{
+    background-color: white;
+    border: 1px solid black;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     
+}
+
+.section-cantidad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.botton-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total-price {
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.btn-cart{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.section-1{
+    margin-left: 10px;
+}
+.section-2{
+    margin-left: 20px;
+}
+.cantidad{
+    font-weight: bold;
+}

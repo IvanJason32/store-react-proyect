@@ -1,21 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useSelectedProducts } from '../context/ProductContext';
+// import { useSelectedProducts } from "../context/ProductContext";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import "./Carrito.css";
+import CardCart from "../Components/CardCart";
 
 const Carrito = () => {
-  const { selectedProducts } = useSelectedProducts();
+  const navigate = useNavigate();
+  // const { selectedProducts } = useSelectedProducts();
+  const { items, totalItems, totalPrice } = useSelector((store) => store.cart);
+  
+  console.log(items);
+
   return (
-    <div style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
-      <h1>Carrito</h1>
-      <ul>
-        {selectedProducts.map((product) => (
-          <li key={product.id}>
-            {product.name} - ${product.price}
-          </li>
-        ))}
-      </ul>
-      <Link to="/checkout" >Ir a pagar</Link>
-    </div>
+    <section>
+      <div className="cart-container">
+        <h1 className="cart-title">Carrito</h1>
+        {totalItems === 0 ? (
+          <p style={{ color: "white" }}>El carrito esta vacio </p>
+        ) : (
+          <>
+            <div className="cart-content">
+              {items.map((product) => {
+                return (
+                  <CardCart key={product.item_id}
+                  product={product} />
+                );
+              })}
+            </div>
+            <div className="botton-section">
+            <button className="btnPagar" onClick={() => navigate("/checkout")}>
+              Pagar
+            </button>
+            <p className="total-price">{`Precio total: $${totalPrice}.00`}</p>
+            </div>
+            
+          </>
+        )}
+      </div>
+    </section>
   );
 };
 
