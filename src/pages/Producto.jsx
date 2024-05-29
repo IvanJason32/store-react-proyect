@@ -64,7 +64,7 @@ const Producto = () => {
   //   return <p>No se encontraron productos.</p>;
   // }
   if (!product) {
-    return <div>Producto no encontrado</div>;
+    return <div>Product not found</div>;
   }
 
   return (
@@ -80,19 +80,19 @@ const Producto = () => {
         <div className="product-info-container">
           <p className="product-details-category">{product.title}</p>
           <h2 className="product-info-name">{product.name}</h2>
-          <p className="product-price">Precio: ${product.price}.00</p>
-          <p className="product-description">Descripción</p>
+          <p className="product-price">Price: ${product.price}.00</p>
+          <p className="product-description">Description</p>
           <p className="product-description-content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
             possimus quae officia reiciendis voluptatum, ipsam veniam fugit
             aperiam sunt reprehenderit. Quos doloribus earum amet voluptatum
             ullam beatae reprehenderit saepe praesentium!
           </p>
-          <button className="add-to-cart-button" onClick={() => dispatch(addToCart(product))}>Añadir al carrito</button>
+          <button className="add-to-cart-button" onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
         </div>
       </div>
       <section className="section-products-container">
-        <h1 className="section-products-title">Otros Productos</h1>
+        <h1 className="section-products-title">More Products!</h1>
         <div className="container-cards">
         {!isP ? (
           otherData.map(product => {

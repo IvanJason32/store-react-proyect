@@ -39,7 +39,7 @@ const Header = () => {
           className={`title-opc ${({ isActive }) =>
             isActive ? "active" : ""}`}
         >
-          Categorias
+          Categories
         </NavLink>
         {uniqueTitles
           ? uniqueTitles.map((element, index) => {

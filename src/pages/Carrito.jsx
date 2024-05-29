@@ -13,19 +13,19 @@ const Carrito = () => {
   return (
     <section className="cart-container-principal">
       <div className="cart-container">
-        <h1 className="cart-title">Carrito</h1>
+        <h1 className="cart-title">Shopping Cart</h1>
         {totalItems === 0 ? (
           <div className="content-card-empty">
             <img className="img-carrito-empty" src={carritoVacioImg} alt="" />
-            <p className="t-carrito-empty-1">¡Empieza un carrito de compras!</p>
+            <p className="t-carrito-empty-1">¡Start your shopping cart!</p>
             <p className="t-carrito-empty-2">
-              Suma productos y consigue envío gratis.
+              Add products and earn free shipping 
             </p>
             <button
               className="btn-carrito-empty"
               onClick={() => navigate("/categorias")}
             >
-              Descubrir productos
+              Discover Products
             </button>
           </div>
         ) : (
@@ -37,14 +37,14 @@ const Carrito = () => {
                 })}
               </div>
               <div className="summary-content">
-                <p className="t-resumen-compra">Resumen de compra</p>
+                <p className="t-resumen-compra">Purchase Resume</p>
                 <div className="t-price-producto">
-                  <p>Producto</p>
+                  <p>Product</p>
                   <p className="total-price">{`$ ${totalPrice}.00`}</p>
                 </div>
                 <div className="t-price-envio">
-                  <p>Envío</p>
-                  <p className="total-envio">Gratis</p>
+                  <p>Shipping fee</p>
+                  <p className="total-envio">Free</p>
                 </div>
                 <div className="t-price-total">
                   <p>Total</p>
@@ -54,7 +54,7 @@ const Carrito = () => {
                   className="btnPagar"
                   onClick={() => navigate("/checkout")}
                 >
-                  Continuar compra
+                  Keep Shopping
                 </button>
               </div>
             </div>

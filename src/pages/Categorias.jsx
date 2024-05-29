@@ -36,7 +36,7 @@ const Categorias = () => {
 
   return (
     <div className="container">
-      <h1>Categorias</h1>
+      <h1>Categories</h1>
       {uniqueTitles ? (
         uniqueTitles.map((item, index) => {
           return (

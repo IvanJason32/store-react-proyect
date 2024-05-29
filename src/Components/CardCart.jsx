@@ -13,13 +13,13 @@ const CardCart = ({ product }) => {
         </div>
         <div className="section-2">
           <p className="t-nombre">{product.name}</p>
-          <p className="t-precio">{`Precio por unidad: $${product.price}.00`}</p>
+          <p className="t-precio">{`Unit Price: $${product.price}.00`}</p>
         </div>
       </div>
 
       <div className="section-3">
         <div className="section-cantidad">
-          <p className="t-cantidad">Cantidad: </p>
+          <p className="t-cantidad">Quantity: </p>
           <button
             className="btn-cart"
             onClick={() => dispatch(decreseToCart(product.item_id))}
