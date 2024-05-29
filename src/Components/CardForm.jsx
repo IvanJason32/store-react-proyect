@@ -49,7 +49,6 @@ const CardForm = () => {
   }
   return (
     <div style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
-      <h1>Checkout</h1>
       <h3>Informacion de Tarjeta de Credito/Debito</h3><br/>
       <div style={{background:"white",paddingTop:".3rem"}}>
         <img src={american_express_icon} style={{width:"64px",height:"48px"}}/>
