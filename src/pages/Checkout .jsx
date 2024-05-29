@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 import american_express_icon from "../assets/American_Express_logo_(2018).svg.png";
 import mastercard_icon from "../assets/Mastercard-logo.svg.webp";
 import visa_icon from "../assets/Visa_Inc._logo.svg.png";
+import './Checkout.css'
 
 const Checkout = () => {
   const [errMessage,setErrMessage] = useState("");
@@ -48,7 +49,7 @@ const Checkout = () => {
     }
   }
   return (
-    <div style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
+    <div className="contCheckout" style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
       <h1>Checkout</h1>
       <h3>Informacion de Tarjeta de Credito/Debito</h3><br/>
       <div style={{background:"white",paddingTop:".3rem"}}>
