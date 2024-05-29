@@ -1,0 +1,131 @@
+.section-success-principal {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.success-container {
+  margin: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+
+}
+.s-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.img-success {
+  width: 50px;
+  height: 50px;
+}
+.title-1 {
+  font-size: 50px;
+  color: white;
+}
+.title-2 {
+  color: white;
+  font-size: 18px;
+}
+
+.summary-content-success {
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  height: auto;
+  align-items: center;
+}
+
+.title-summary {
+  /* border-bottom: 1px solid rgb(189, 189, 189); */
+  width: 90%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.n-order-date-summary {
+  padding: 5px 0px;
+  border-bottom: 1px solid rgb(213, 213, 213);
+  width: 90%;
+  text-align: center;
+}
+
+.t-price-producto-summary {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  font-size: 15px;
+}
+
+.total-price-summary {
+  font-size: 15px;
+}
+
+.t-price-envio-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 5px;
+  font-size: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.t-price-total-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.metodo-pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgb(201, 199, 199);
+  width: 90%;
+}
+
+.btnRegresarTienda {
+  margin-top: 20px;
+  border: none;
+  height: 50px;
+  width: 90%;
+  background-color: var(--purplelight);
+  color: white;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.title-metodo-pago {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.tipo-metodo-pago{
+    font-size: 17px;
+    margin-top: 5px;
+    font-style: italic;
+}
+.terminacion-tarjeta{
+    font-size: 15px;
+    margin-bottom: 5px;
+}

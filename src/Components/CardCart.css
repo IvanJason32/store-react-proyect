@@ -1,16 +1,24 @@
+:root{
+    --purpleBackGround: #352F44;
+    --purplelight: #5C5470;
+    --lila: #B9B4C7;
+    --white: #FAF0E6;
+}
+
 .img-card-product {
     height: 90%;
-    width: 180px;
+    width: 120px;
     border-radius: 50%;
 }
 
 .product-content{
     background-color: white;
     border: 1px solid black;
-    height: 200px;
+    height: 130px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border-radius: 10px;
 }
 
@@ -27,19 +35,49 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    background-color: var(--lila);
+    color: var(--white);
+    font-weight: 500;
+}
+.section-start {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    gap: 20px;
+    margin-left: 40px;
 }
 
-
 .section-1{
-    margin-left: 40px;
-    height: 200px;
-    border: 1px solid purple;
+    /* margin-left: 40px; */
+    height: 130px;
+    /* border: 1px solid purple; */
     display: flex;
     align-items: center;
 }
 .section-2{
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    /* border: 1px solid green; */
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-3{
+    /* margin-left: 20px; */
+    /* border: 1px solid blue; */
+    height: 130px;
+    display: flex   ;
+    /* justify-content: center; */
+    margin-right: 40px;
 }
 .cantidad{
     font-weight: bold;
+}
+
+.t-nombre {
+    font-size: 20px;
+    font-weight: 700;
+}
+.t-precio {
+    font-size: 15px;
 }

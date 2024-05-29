@@ -1,13 +1,8 @@
-// import React from 'react'
 
-import { useState } from "react";
-import { Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import CardForm from "../Components/CardForm";
 import PurchaseSummary from "../Components/PurchaseSummary";
 
 const Checkout = () => {
-  const { items, totalItems, totalPrice } = useSelector((store) => store.cart);
   
   return (
     <div style={{marginTop: "10px", color: "white", textAlign:"center"}}>
