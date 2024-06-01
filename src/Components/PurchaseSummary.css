@@ -40,4 +40,38 @@
     display: block;
     margin-bottom: 5px;
   }
+  .component-container{
+    margin-top: 2rem
+  }
+  .card-component-container{
+    min-width: 520px;
+  }
+  .purchase-component-container{
+    min-width: 520px;
+  }
   
+  @media (max-width: 1072px) {
+    .component-container{
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem
+    }
+    .card-component-container{
+      min-width: 200px;
+    }
+    .purchase-component-container{
+      min-width: 350px;
+    }
+    
+    .purchase-summary {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      color: white;
+      background-color: var(--purplelight);
+      padding: 20px;
+      border-radius: 8px;
+      width: auto;
+      max-width: 800px;
+  }
+  }
