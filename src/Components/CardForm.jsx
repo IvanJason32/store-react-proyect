@@ -57,12 +57,12 @@ const CardForm = () => {
         <img src={mastercard_icon} alt="Mastercard" className="img-master"/>
         <img src={visa_icon} alt="Visa" className="img-visa"/>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className="form-checkout" onSubmit={handleSubmit}>
         {errMessage && <p className="error-message">{errMessage}</p>}
         <div className="form-group">
-          <label htmlFor="ccn">Card Number:</label>
+          <label className="label" htmlFor="ccn">Card Number:</label>
           <input
-            className="ccn"
+            className="ccn input"
             id="ccn"
             type="tel"
             pattern="\d*"
@@ -81,9 +81,9 @@ const CardForm = () => {
           <i className="card-type">{cardType}</i>
         </div>
         <div className="form-group">
-          <label htmlFor="cvv">Security Number:</label>
+          <label className="label" htmlFor="cvv">Security Number:</label>
           <input
-            className="cvv"
+            className="cvv input"
             id="cvv"
             type="tel"
             pattern="\d*"
@@ -100,9 +100,9 @@ const CardForm = () => {
           </i>
         </div>
         <div className="form-group">
-          <label>Expire Date:</label>
+          <label className="label">Expire Date:</label>
           <input
-            className="exp-date"
+            className="exp-date input"
             id="exp-month"
             type="number"
             inputMode="numeric"
@@ -115,7 +115,7 @@ const CardForm = () => {
           />
           <span>/</span>
           <input
-            className="exp-date"
+            className="exp-date input"
             id="exp-year"
             type="number"
             inputMode="numeric"
@@ -127,7 +127,7 @@ const CardForm = () => {
             onChange={(e) => setExpYear(e.target.value)}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button className="btn-checkout" type="submit">Submit</button>
       </form>
       {redirect && <Navigate to="/succes" replace={true} />}
     </div>

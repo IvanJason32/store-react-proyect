@@ -1,13 +1,25 @@
 :root{
     --purpleBackGround: #352F44;
-    --bluelight: #3C5B6F;
-    --brownDark: #948979;
-    --brownLight: #DFD0B8;
-    --white: #fff;
 }
 
-body{
+.principal-structure{
     background-color: var(--purpleBackGround);
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+
+.container-header {
     width: 100vw;
-    height: 100vh;
+    min-height: 10vh;
+    /* border: 1px solid white; */
+}
+
+.container-body {
+    width: 100vw;
+    min-height: 90vh;
+    /* overflow: hidden; */
 }

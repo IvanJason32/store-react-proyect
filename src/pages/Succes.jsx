@@ -10,8 +10,9 @@ const Succes = () => {
   const [norder, setNorder] = useState("");
   const [date, setDate] = useState();
   const dispatch = useDispatch();
-  const { items, totalItems, totalPrice } = useSelector((store) => store.cart);
-  const { numberCard, cleanNumberCard, typeCard, cleanTypeCard } = useCreditCard();
+  const { totalPrice } = useSelector((store) => store.cart);
+  const { numberCard, cleanNumberCard, typeCard, cleanTypeCard } =
+    useCreditCard();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,7 +35,6 @@ const Succes = () => {
           <h1 className="title-1">Thank you!</h1>
           <img className="img-success" src={imgSuccess} alt="" />
         </div>
-
         <p className="title-2">Your order was completed successfully.</p>
         <div className="summary-content-success">
           <p className="title-summary">Resumen de la compra</p>
@@ -42,7 +42,9 @@ const Succes = () => {
           <div className="metodo-pago">
             <p className="title-metodo-pago">Metodo de Pago</p>
             <p className="tipo-metodo-pago">{`Tarjeta de credito ${typeCard}`}</p>
-            <p className="terminacion-tarjeta">{`Terminada en ${numberCard % 10000}`}</p>
+            <p className="terminacion-tarjeta">{`Terminada en ${
+              numberCard % 10000
+            }`}</p>
           </div>
           <div className="t-price-producto-summary">
             <p>Producto</p>
@@ -57,7 +59,7 @@ const Succes = () => {
             <p className="total-compra-summary">{`$ ${totalPrice}.00`}</p>
           </div>
           <button
-          className="btnRegresarTienda"
+            className="btnRegresarTienda"
             onClick={() => {
               cleanNumberCard();
               cleanTypeCard();

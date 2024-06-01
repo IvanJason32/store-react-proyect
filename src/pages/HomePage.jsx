@@ -32,7 +32,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="contHome" style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
+    <div className="contHome">
       <h1>HomePage</h1>
       <div className="container-categorias">
         {uniqueTitles.length === 5

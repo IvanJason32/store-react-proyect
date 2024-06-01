@@ -5,12 +5,16 @@ import { SelectedProductsProvider } from "../context/ProductContext";
 
 const Root = () => {
   return (
-    <>
+    <div className="principal-structure">
       <SelectedProductsProvider>
-        <Header />
-        <Outlet />
+        <div className="container-header">
+          <Header />
+        </div>
+        <div className="container-body">
+          <Outlet />
+        </div>
       </SelectedProductsProvider>
-    </>
+    </div>
   );
 };
 

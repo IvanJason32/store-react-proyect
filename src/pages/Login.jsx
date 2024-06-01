@@ -2,13 +2,15 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import useLoginPost from "../hooks/useLoginPost";
 import { useAuth } from "../hooks/useAuth";
-import './Login.css'
+import "./Login.css";
+import imgAvatar from "../assets/avatar.png";
+import imgPassword from "../assets/contrasena.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { loginDo, loading, error } = useLoginPost();
-  const [redirect, setRedirect] = useState(false); 
+  const [redirect, setRedirect] = useState(false);
   const { login } = useAuth();
 
   const handleSubmit = async (e) => {
@@ -17,48 +19,57 @@ const Login = () => {
     if (data) {
       const userData = {
         token: data,
-        email
-      }
+        email,
+      };
       login(userData);
       setRedirect(true);
     }
   };
 
   return (
-    <div className="contLogin" style={{ textAlign: "center", marginTop: "10px", color: "white" }}>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="email-form">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="password-form">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="text"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button className="btn-login" disabled={loading ? true : false}>
-          {loading ? "Iniciando sesión..." : "Iniciar sesión"}
-        </button>
-      </form>
-      {error && <p style={{ color: "red" }}>User not Found</p>}
-      <p>
-        ¿Your'e not registered?{" "}
-        <Link style={{ color: "white" }} to="/register">
-          Sign Up
-        </Link>
-      </p>
+    <div className="contLogin">
+      <div className="element-login">
+        <div className="cover-elements">
+          <h1 className="title-login">Login</h1>
+          <form className="form-login" onSubmit={handleSubmit}>
+            <div className="email-form">
+              <img className="ico-input" src={imgAvatar} alt="" />
+              <input
+                className="email-input"
+                type="text"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="password-form">
+              <img className="ico-input" src={imgPassword} alt="" />
+              <input
+                className="pass-input"
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <p className="text-sing-up">
+              ¿You're not registered?{" "}
+              <Link style={{ color: "white" }} to="/register">
+                Sign Up
+              </Link>
+            </p>
+            <button className="btn-login" disabled={loading ? true : false}>
+              {loading ? "LOADING..." : "LOGIN"}
+            </button>
+          </form>
 
-      {redirect && <Navigate to="/home" replace={true} />}
+          {error && <p className="text-error">User not Found</p>}
+        </div>
+      </div>
+      {/* 
+      
+
+      {redirect && <Navigate to="/home" replace={true} />} */}
     </div>
   );
 };
