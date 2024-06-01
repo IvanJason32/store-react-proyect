@@ -5,13 +5,13 @@ import PurchaseSummary from "../Components/PurchaseSummary";
 const Checkout = () => {
   
   return (
-    <div style={{marginTop: "10px", color: "white", textAlign:"center"}}>
+    <div style={{marginTop: "10px", color: "white", textAlign:"center",gap:"1rem"}}>
     <h1>Checkout</h1>
-    <div style={{display:"flex", justifyContent:"center", margintop: "7rem",marginbottom:"7rem"}}>
-      <div style={{width:"40%",textAlign:"left",marginTop:"-14px"}}>
+    <div style={{display:"flex", justifyContent:"center", margintop: "7rem",marginbottom:"7rem"}} className="component-container">
+      <div style={{textAlign:"left",marginTop:"-14px"}} className="purchase-component-container">
         <PurchaseSummary/>
       </div>
-      <div style={{width:"30%"}}>
+      <div className="card-component-container">
         <CardForm/>
       </div>
     </div>
