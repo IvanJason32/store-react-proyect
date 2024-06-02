@@ -19,7 +19,7 @@ const CardCart = ({ product }) => {
 
       <div className="section-3">
         <div className="section-cantidad">
-          <p className="t-cantidad">Quantity: </p>
+          {/* <p className="t-cantidad">Quantity: </p> */}
           <button
             className="btn-cart"
             onClick={() => dispatch(decreseToCart(product.item_id))}

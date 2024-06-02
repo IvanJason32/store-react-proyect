@@ -1,9 +1,9 @@
-:root{
-    --purpleBackGround: #352F44;
-    --purplelight: #5C5470;
-    --lila: #B9B4C7;
-    --white: #FAF0E6;
-    --black: #000000;
+:root {
+  --purpleBackGround: #352f44;
+  --purplelight: #5c5470;
+  --lila: #b9b4c7;
+  --white: #faf0e6;
+  --black: #000000;
 }
 
 .container-categorias {
@@ -12,13 +12,13 @@
   gap: 15px;
   justify-content: center;
   margin-top: 20px;
-  
 }
-.contHome{
-    font-family: "Roboto", sans-serif;
-    color: white;
-    text-align: center;
-    margin-top: 30px;
+
+.contHome {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
 }
 .card-categoria {
   background-color: var(--lila);
@@ -45,4 +45,28 @@
   font-family: "Roboto", sans-serif;
   font-size: 25px;
   font-weight: 500;
+}
+
+@media (max-width: 425px) {
+  .container-categorias {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 30px 0px;
+  }
+  .card-categoria {
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .img-categoria {
+    width: 350px;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
 }

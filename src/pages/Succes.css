@@ -47,7 +47,6 @@
 }
 
 .title-summary {
-  /* border-bottom: 1px solid rgb(189, 189, 189); */
   width: 90%;
   text-align: center;
   margin-top: 10px;
@@ -128,4 +127,59 @@
 .terminacion-tarjeta{
     font-size: 15px;
     margin-bottom: 5px;
+}
+.tipo-pago-seccions{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0px;
+}
+
+.tipo-pago-section-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-tipo-tarjeta {
+  width: 60px;
+  height: 30px;
+}
+
+@media (max-width: 425px) {
+  
+  .success-container {
+    width: 80%;
+    gap: 5px;
+  
+  }
+  .s-1 {
+    gap: 15px;
+  }
+  
+  .img-success {
+    width: 40px;
+    height: 40px;
+  }
+  .title-1 {
+    font-size: 40px;
+  }
+  .title-2 {
+    font-size: 16px;
+  }
+  
+  .summary-content-success {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 350px;
+  }
+  
+  .title-summary {
+    margin-top: 10px;
+  }
+
+  .btnRegresarTienda {
+    margin-bottom: 15px;
+  }
 }

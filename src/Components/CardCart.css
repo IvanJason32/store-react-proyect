@@ -1,83 +1,148 @@
-:root{
-    --purpleBackGround: #352F44;
-    --purplelight: #5C5470;
-    --lila: #B9B4C7;
-    --white: #FAF0E6;
+:root {
+  --purpleBackGround: #352f44;
+  --purplelight: #5c5470;
+  --lila: #b9b4c7;
+  --white: #faf0e6;
 }
 
 .img-card-product {
-    height: 90%;
-    width: 120px;
-    border-radius: 50%;
+  height: 90%;
+  width: 120px;
+  border-radius: 50%;
 }
 
-.product-content{
-    background-color: white;
-    border: 1px solid black;
-    height: 130px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
+.product-content {
+  background-color: white;
+  border: 1px solid black;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
-.section-cantidad{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+.section-cantidad {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
-.btn-cart{
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    background-color: var(--lila);
-    color: var(--white);
-    font-weight: 500;
+.btn-cart {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--lila);
+  color: var(--white);
+  font-weight: 500;
 }
 .section-start {
-    display: flex;
-    flex-direction: row;
-    /* border: 2px solid red; */
-    gap: 20px;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 40px;
 }
 
-.section-1{
-    /* margin-left: 40px; */
-    height: 130px;
-    /* border: 1px solid purple; */
-    display: flex;
-    align-items: center;
+.section-1 {
+  height: 130px;
+  display: flex;
+  align-items: center;
 }
-.section-2{
-    /* margin-left: 20px; */
-    /* border: 1px solid green; */
-    height: 130px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.section-2 {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.section-3{
-    /* margin-left: 20px; */
-    /* border: 1px solid blue; */
-    height: 130px;
-    display: flex   ;
-    /* justify-content: center; */
-    margin-right: 40px;
+.section-3 {
+  height: 130px;
+  display: flex;
+  margin-right: 40px;
 }
-.cantidad{
-    font-weight: bold;
+.cantidad {
+  font-weight: bold;
 }
 
 .t-nombre {
-    font-size: 20px;
-    font-weight: 700;
+  font-size: 20px;
+  font-weight: 700;
 }
 .t-precio {
-    font-size: 15px;
+  font-size: 15px;
+}
+
+@media (max-width: 425px) {
+    .img-card-product {
+        height: 70%;
+        width: 90px;
+        /* border-radius: 50%; */
+      }
+      
+      .product-content {
+        /* background-color: white; */
+        /* border: 1px solid black; */
+        height: 110px;
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        border-radius: 7px;
+      }
+      
+      .section-cantidad {
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: center; */
+        /* gap: 10px; */
+      }
+      
+      .btn-cart {
+        /* width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: var(--lila);
+        color: var(--white);
+        font-weight: 500; */
+      }
+      .section-start {
+        /* display: flex; */
+        /* flex-direction: row; */
+        gap: 15px;
+        margin-left: 15px;
+      }
+      
+      .section-1 {
+        height: 110px;
+        /* display: flex; */
+        /* align-items: center; */
+      }
+      .section-2 {
+        height: 110px;
+        width: 100px;
+        /* border: 1px solid black; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: center; */
+      }
+      .section-3 {
+        height: 110px;
+        /* display: flex; */
+        margin-right: 20px;
+      }
+      /* .cantidad {
+        font-weight: bold;
+      } */
+      
+      .t-nombre {
+        font-size: 15px;
+        /* font-weight: 700; */
+      }
+      .t-precio {
+        font-size: 12px;
+      }
 }

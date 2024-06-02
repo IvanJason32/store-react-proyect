@@ -5,6 +5,9 @@ import { useCreditCard } from "../hooks/useCreditCard";
 import imgSuccess from "../assets/success.png";
 import "./Succes.css";
 import { useEffect, useState } from "react";
+import visaImg from "../assets/visa.png";
+import masterCardImg from "../assets/masterCard.png";
+import amexImg from "../assets/AmericanExpress.png";
 
 const Succes = () => {
   const [norder, setNorder] = useState("");
@@ -28,6 +31,8 @@ const Succes = () => {
     setNorder(numeroAleatorio);
   };
 
+  console.log(typeCard);
+
   return (
     <section className="section-success-principal">
       <div className="success-container">
@@ -41,10 +46,33 @@ const Succes = () => {
           <p className="n-order-date-summary">{`N°Order: #${norder} - ${date}`}</p>
           <div className="metodo-pago">
             <p className="title-metodo-pago">Metodo de Pago</p>
-            <p className="tipo-metodo-pago">{`Tarjeta de credito ${typeCard}`}</p>
-            <p className="terminacion-tarjeta">{`Terminada en ${
-              numberCard % 10000
-            }`}</p>
+            <div className="tipo-pago-seccions">
+              <div className="tipo-pago-section-1">
+                <p className="tipo-metodo-pago">
+                  {typeCard === "American Express"
+                    ? `Tarjeta de Credito AM EX`
+                    : `Tarjeta de Credito ${typeCard}`}
+                </p>
+                <p className="terminacion-tarjeta">{`Terminada en ${
+                  numberCard % 10000
+                }`}</p>
+              </div>
+              <div className="tipo-pago-section-2">
+                <img
+                  className="img-tipo-tarjeta"
+                  src={
+                    typeCard === "Visa"
+                      ? visaImg
+                      : typeCard === "Mastercard"
+                      ? masterCardImg
+                      : typeCard === "American Express"
+                      ? amexImg
+                      : ""
+                  }
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
           <div className="t-price-producto-summary">
             <p>Producto</p>

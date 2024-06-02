@@ -15,15 +15,7 @@ export const CreditCardProvider = ({ children }) => {
     };
 
     const addTypeCard = (typeCard) => {
-        let nameType = "";
-        if (typeCard === "American Express Detected") {
-            nameType = "American Express";
-        } else if(typeCard === "Mastercard Detected") {
-            nameType = "Mastercard";
-        } else if(typeCard === "Visa Detected") {
-            nameType = "Visa";
-        }
-        setTypeCard(nameType);
+        setTypeCard(typeCard);
     };
 
     const cleanTypeCard = () => {
