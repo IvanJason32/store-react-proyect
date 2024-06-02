@@ -3,7 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import useLoginPost from "../hooks/useLoginPost";
 import { useAuth } from "../hooks/useAuth";
 import "./Login.css";
-import imgAvatar from "../assets/avatar.png";
+import imgCorreo from "../assets/correo.png";
 import imgPassword from "../assets/contrasena.png";
 
 const Login = () => {
@@ -33,20 +33,27 @@ const Login = () => {
           <h1 className="title-login">Login</h1>
           <form className="form-login" onSubmit={handleSubmit}>
             <div className="email-form">
-              <img className="ico-input" src={imgAvatar} alt="" />
+              <div className="cont-img">
+                <img className="ico-input" src={imgCorreo} alt="" />
+              </div>
+
               <input
                 className="email-input"
                 type="text"
+                placeholder="Email..."
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="password-form">
-              <img className="ico-input" src={imgPassword} alt="" />
+              <div className="cont-img">
+                <img className="ico-input" src={imgPassword} alt="" />
+              </div>
               <input
                 className="pass-input"
                 type="password"
+                placeholder="Password..."
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -66,10 +73,8 @@ const Login = () => {
           {error && <p className="text-error">User not Found</p>}
         </div>
       </div>
-      {/* 
-      
 
-      {redirect && <Navigate to="/home" replace={true} />} */}
+      {redirect && <Navigate to="/home" replace={true} />}
     </div>
   );
 };
