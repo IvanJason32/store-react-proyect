@@ -35,9 +35,9 @@ const Categorias = () => {
   }, [data, isPending]);
 
   return (
-    <div className="container">
+    <div className="container-categorias">
       <h1>Categories</h1>
-      {uniqueTitles ? (
+      {!isPending ? (
         uniqueTitles.map((item, index) => {
           return (
             <div className="container_class" key={index}>

@@ -6,7 +6,7 @@
   --black: #000000;
 }
 
-.container-categorias {
+.container-categorias-homepage {
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -48,7 +48,7 @@
 }
 
 @media (max-width: 425px) {
-  .container-categorias {
+  .container-categorias-homepage {
     flex-direction: column;
     gap: 20px;
     align-items: center;

@@ -34,7 +34,7 @@ const HomePage = () => {
   return (
     <div className="contHome">
       <h1>HomePage</h1>
-      <div className="container-categorias">
+      <div className="container-categorias-homepage">
         {uniqueTitles.length === 5
           ? uniqueTitles.map((element, index) => {
                 return( 
