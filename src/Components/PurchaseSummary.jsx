@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./PurchaseSummary.css"; // Importa el archivo CSS
+import "./PurchaseSummary.css"; 
 
 const PurchaseSummary = () => {
   const { items, totalItems, totalPrice } = useSelector((store) => store.cart);

@@ -15,8 +15,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* border: 1px solid wheat; */
     margin-top: 20px;
-    /* gap: 10px; */
     margin-bottom: 20px;
 }

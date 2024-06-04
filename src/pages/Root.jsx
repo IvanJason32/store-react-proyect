@@ -5,7 +5,6 @@ import { SelectedProductsProvider } from "../context/ProductContext";
 // import { useContext } from "react";
 
 const Root = () => {
-  // const { uniqueTitles, setIsMenuOpen } = useContext(NavbarContext);
 
   return (
     <div className="principal-structure">

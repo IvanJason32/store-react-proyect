@@ -4,7 +4,7 @@ import american_express_icon from "../assets/American_Express_logo_(2018).svg.pn
 import mastercard_icon from "../assets/Mastercard-logo.svg.webp";
 import visa_icon from "../assets/Visa_Inc._logo.svg.png";
 import { useCreditCard } from "../hooks/useCreditCard";
-import "./CardForm.css"; // Importa el archivo CSS
+import "./CardForm.css";
 
 const CardForm = () => {
   const [errMessage, setErrMessage] = useState("");

@@ -15,11 +15,9 @@
 .container-header {
     width: 100vw;
     min-height: 10vh;
-    /* border: 1px solid white; */
 }
 
 .container-body {
     width: 100vw;
     min-height: 90vh;
-    /* overflow: hidden; */
 }

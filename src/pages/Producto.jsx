@@ -18,18 +18,9 @@ const Producto = () => {
   const [isP, setIsP] = useState(true);
   const dispatch = useDispatch();
   
-  // console.log(id)
-  // const { selectedProducts, addToCart } = useSelectedProducts();
-
-  // const initialProduct = selectedProducts.find((product) => String(product.item_id) === String(productId));
-
-  // const [mainProduct, setMainProduct] = useState(initialProduct);
-  // const [otherProducts, setOtherProducts] = useState(selectedProducts.filter((product) => String(product.item_id) !== String(productId)));
-
   useEffect(() => {
     getData();
-    // setMainProduct(initialProduct);
-    // setOtherProducts(selectedProducts.filter((product) => String(product.item_id) !== String(productId)));
+
   }, []);
 
   useEffect(() => {
@@ -47,22 +38,6 @@ const Producto = () => {
     }
   }, [isPending, productId]);
 
-  // const handleProductClick = (clickedProduct) => {
-  //   setOtherProducts((prevOtherProducts) => {
-  //     const newOtherProducts = prevOtherProducts.filter((product) => product.item_id !== clickedProduct.item_id);
-  //     newOtherProducts.push(mainProduct);
-  //     return newOtherProducts;
-  //   });
-  //   setMainProduct(clickedProduct);
-  // };
-
-  // const handleAddToCart = () => {
-  //   addToCart(mainProduct);
-  // };
-
-  // if (!mainProduct) {
-  //   return <p>No se encontraron productos.</p>;
-  // }
   if (!product) {
     return <div>Product not found</div>;
   }
@@ -98,18 +73,9 @@ const Producto = () => {
           otherData.map(product => {
             return <CardProducts
                   key={product.item_id}
-                  // productId={product.item_id}
-                  // name={product.name}
-                  // price={product.price}
-                  // img={product.imageurl}
                   product={product}
-                  // onAddToCart={() => addSelectedProduct(product)} // Agregar producto al contexto global al hacer clic en la tarjeta
                 />
           })
-            // .filter((product) => product.title === params.categoriaName)
-            // .map((product) => (
-                
-            // ))
         ) : (
           <p>Cargando...</p>
         )}

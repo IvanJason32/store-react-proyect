@@ -87,12 +87,11 @@ const Register = () => {
             </button>
           </form>
         </div>
-      </div>
-      {/* 
+      </div> 
       
       {error && <p style={{ color: "red" }}>There is an error</p>}
       {redirect && <Navigate to="/home" replace={true} />}
-      {warning && <p style={{ color: "red" }}>{warning}</p>} */}
+      {warning && <p style={{ color: "red" }}>{warning}</p>}
     </div>
   );
 };
