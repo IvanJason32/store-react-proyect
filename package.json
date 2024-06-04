@@ -2,7 +2,7 @@
   "name": "react-routes-example",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ivanjason32.github.io/store-react-proyect-route/",
+  "homepage": "https://ivanjason32.github.io/store-react-proyect/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
